@@ -9,37 +9,33 @@
     >
       <ul class="nav__list grid">
         <li class="nav__item">
-          <a href="#home" class="nav__link">
-            <i class="uil uil-estate nav__icon" (click)="navToggle()"></i>Home
+          <a href="#home" class="nav__link active-link" (click)="navToggle()">
+            <i class="uil uil-estate nav__icon"></i>Home
           </a>
         </li>
         <li class="nav__item">
-          <a href="#about" class="nav__link">
-            <i class="uil uil-user nav__icon" (click)="navToggle()"></i>About
+          <a href="#about" class="nav__link" (click)="navToggle()">
+            <i class="uil uil-user nav__icon"></i>About
           </a>
         </li>
         <li class="nav__item">
-          <a href="#skills" class="nav__link">
-            <i class="uil uil-file-alt nav__icon" (click)="navToggle()"></i
-            >Skills
+          <a href="#skills" class="nav__link" (click)="navToggle()">
+            <i class="uil uil-file-alt nav__icon"></i>Skills
           </a>
         </li>
         <li class="nav__item">
-          <a href="#services" class="nav__link">
-            <i class="uil uil-briefcase-alt nav__icon" (click)="navToggle()"></i
-            >Services
+          <a href="#services" class="nav__link" (click)="navToggle()">
+            <i class="uil uil-briefcase-alt nav__icon"></i>Services
           </a>
         </li>
         <li class="nav__item">
-          <a href="#portfolio" class="nav__link">
-            <i class="uil uil-scenery nav__icon" (click)="navToggle()"></i
-            >Protfolio
+          <a href="#portfolio" class="nav__link" (click)="navToggle()">
+            <i class="uil uil-scenery nav__icon"></i>Protfolio
           </a>
         </li>
         <li class="nav__item">
-          <a href="#contact" class="nav__link">
-            <i class="uil uil-message nav__icon" (click)="navToggle()"></i
-            >Contact Me
+          <a href="#contact" class="nav__link" (click)="navToggle()">
+            <i class="uil uil-message nav__icon"></i>Contact Me
           </a>
         </li>
       </ul>
@@ -50,6 +46,13 @@
       ></i>
     </div>
     <div class="nav__btns">
+      <!-- Theme change button -->
+      <i
+        class="uil uil-moon change-theme"
+        [ngClass]="isDark ? 'uil-sun' : 'uil-moon'"
+        id="theme-button"
+        (click)="toggelTheme()"
+      ></i>
       <div class="nav__toggle" id="nav-toggle">
         <i class="uil uil-apps" (click)="navToggle()"></i>
       </div>
@@ -422,4 +425,186 @@
       </div>
     </div>
   </section>
+  <!--================= PORTFOLIO =====================-->
+  <section class="portfolio section" id="portfolio">
+    <h2 class="section__title">Portfolio</h2>
+    <span class="section__subtitle">Mosr recent work</span>
+    <div class="portfolio__container container">
+      <div>
+        <!--================= PORTFOLIO 1 =====================-->
+        <div class="portfolio__content grid">
+          <img src="" alt="" class="portfolio__image" />
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">Mordern Website</h3>
+            <p class="portfolio__description">descriptionm</p>
+            <a
+              href=""
+              class="button button--flex button--small portfolio__button"
+            >
+              demo <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+          </div>
+        </div>
+        <!--================= PORTFOLIO 2 =====================-->
+        <div class="portfolio__content grid">
+          <img src="" alt="" class="portfolio__image" />
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">2323 Website</h3>
+            <p class="portfolio__description">descriptionm sdd</p>
+            <a
+              href=""
+              class="button button--flex button--small portfolio__button"
+            >
+              demo <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================= TESTIMONIAL =====================-->
+  <section class="testimonial section">
+    <h2 class="section__title">Testimonial</h2>
+    <span class="section__subtitle">My client saying</span>
+    <div class="testimonial__container container">
+      <div>
+        <div class="testimonial__content">
+          <div class="testimonial__data">
+            <div class="testimonial__header">
+              <img src="" alt="" />
+              <div>
+                <h3 class="testimonial__name">Keerthi</h3>
+                <span class="testimonial__client"></span>
+              </div>
+            </div>
+            <div>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+            </div>
+          </div>
+          <p class="testimonila__description">gdfgdfgdfg</p>
+        </div>
+
+        <div class="testimonial__content">
+          <div class="testimonial__data">
+            <div class="testimonial__header">
+              <img src="" alt="" />
+              <div>
+                <h3 class="testimonial__name">Zuveriya</h3>
+                <span class="testimonial__client"></span>
+              </div>
+            </div>
+            <div>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+              <i class="uil uil-start testimonial__icon-star"></i>
+            </div>
+          </div>
+          <p class="testimonila__description">gdfgdfgdfg</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================= CONTACT ME =====================-->
+  <section class="contact section" id="contact">
+    <h2 class="section__title">Contact Me</h2>
+    <span class="section__subtitle">Get in touch</span>
+    <div class="contact__container container grid">
+      <div>
+        <div class="contact__information">
+          <i class="uil uil-phone contact__icon"></i>
+          <div>
+            <h3 class="contact__title">Call Me</h3>
+            <span class="contact__subtitle">+91-866-709-5979</span>
+          </div>
+        </div>
+        <div class="contact__information">
+          <i class="uil uil-envelope contact__icon"></i>
+          <div>
+            <h3 class="contact__title">Email</h3>
+            <span class="contact__subtitle">kiran.kumar.msingh@gmail.com</span>
+          </div>
+        </div>
+        <div class="contact__information">
+          <i class="uil uil-map-marker contact__icon"></i>
+          <div>
+            <h3 class="contact__title">Location</h3>
+            <span class="contact__subtitle"
+              >Chennai - No17C, Seethapathy 1st Street, Madhavaram</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <form action="" class="contact__form grid">
+        <div class="contact__inputs grid">
+          <div class="contact__content">
+            <label for="" class="contact__label">Name</label>
+            <input type="text" class="contact__input" />
+          </div>
+          <div class="contact__content">
+            <label for="" class="contact__label">Email</label>
+            <input type="email" class="contact__input" />
+          </div>
+        </div>
+        <div class="contact__content">
+          <label for="" class="contact__label">Subject</label>
+          <input type="text" class="contact__input" />
+        </div>
+        <div class="contact__content">
+          <label for="" class="contact__label">Message</label>
+          <textarea
+            name=""
+            id=""
+            cols="0"
+            rows="7"
+            class="contact__input"
+          ></textarea>
+        </div>
+        <div>
+          <a href="#" class="button button--flex">
+            Send Message
+            <i class="uil uil-message button__icon"></i>
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!--================= FOOTER =====================-->
+  <footer class="footer">
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <h1 class="footer__title">Kiran</h1>
+          <span class="footer__subtitle">Frontend developer</span>
+        </div>
+        <ul class="footer__links">
+          <li>
+            <a href="" class="footer__link">Services</a>
+          </li>
+          <li>
+            <a href="" class="footer__link">Portfolio</a>
+          </li>
+          <li>
+            <a href="" class="footer__link">Contact Me</a>
+          </li>
+        </ul>
+        <div class="footer__social">
+          <a href="" class="footer__social"> fb </a>
+          <a href="" class="footer__social"> insta </a>
+          <a href="" class="footer__social"> twitter </a>
+        </div>
+      </div>
+      <p class="footer__copy">&#169; Kiran. All right reserved</p>
+    </div>
+  </footer>
+  <!--================= SCROLL TOP =====================-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="uil uil-arrow-up scrollup__icon"></i>
+  </a>
 </main>
