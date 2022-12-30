@@ -104,11 +104,11 @@
           </svg>
         </div>
         <div class="home__data">
-          <h1 class="home__title">Hi, I'am Kiran Kuamr M</h1>
+          <h1 class="home__title">Hi, I'am Kiran Kumar M</h1>
           <h3 class="home__subtitle">Frontend Developer</h3>
           <p class="home__description">
             High level experience in web design and development knowledge,
-            producing quqlity work.
+            producing quality work.
           </p>
           <a href="#contact" class="button button--flex">
             Contact Me <i class="uil uil-message button__icon"></i>
@@ -305,12 +305,14 @@
       <div class="qualification__tabs">
         <div
           class="qualification__button button--flex"
+          [ngClass]="qulifiactionIndex == 1 ? 'active' : ''"
           (click)="setQulificationIndex(1)"
         >
           <i class="uil uil-graduation-cap qualification__icon"></i>Education
         </div>
         <div
           class="qualification__button button--flex"
+          [ngClass]="qulifiactionIndex == 2 ? 'active' : ''"
           (click)="setQulificationIndex(2)"
         >
           <i class="uil uil-briefcase-alt qualification__icon"></i>Work

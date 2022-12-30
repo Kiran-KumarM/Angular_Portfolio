@@ -117,6 +117,11 @@
   width: 170px;
   x: 20px;
   y: 16px;
+  transition: 0.25s ease-in-out;
+}
+.home__blob:hover .home__blob-img {
+  transform: scale(1.03);
+  x: 16px;
 }
 
 .home__data {
@@ -169,7 +174,7 @@
 }
 .button__icon {
   font-size: 1.25rem;
-  margin-left: var(--mg-0-5);
+  margin-left: var(--mb-0-5);
   transition: 0.3s;
 }
 .button--flex {
@@ -290,7 +295,8 @@
   font-weight: var(--font-medium);
   cursor: pointer;
 }
-.qualification__button:hover {
+.qualification__button:hover,
+.qualification__button.active {
   color: var(--first-color);
 }
 .qualification__icon {
