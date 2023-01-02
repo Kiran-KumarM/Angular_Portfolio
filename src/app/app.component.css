@@ -159,7 +159,20 @@
 .home__scroll-arrow {
   font-size: 1.25rem;
 }
-
+.home__scroll-arrow {
+  animation: jumpInfinite 1.5s infinite;
+}
+@keyframes jumpInfinite {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
 /*=========== BUTTONS ===============*/
 .button {
   display: inline-block;
