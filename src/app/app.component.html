@@ -197,59 +197,102 @@
           </div>
           <div class="skills__list grid">
             <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">HTML</h3>
-                <span class="skills__number">90%</span>
-              </div>
-              <div class="skills__bar">
-                <span
-                  class="skills__percentage skills__html"
-                  [style.width.%]="90"
-                ></span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">CSS</h3>
-                <span class="skills__number">80%</span>
-              </div>
-              <div class="skills__bar">
-                <span
-                  class="skills__percentage skills__css"
-                  [style.width.%]="80"
-                ></span>
+              <img src="assets/images/html-5.svg" alt="" width="41px" />
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">HTML</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__html"
+                    [style.width.%]="90"
+                  ></span>
+                </div>
               </div>
             </div>
             <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">JavaScript</h3>
-                <span class="skills__number">75%</span>
+              <img src="assets/images/css3.svg" alt="" width="41px" />
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">CSS</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__css"
+                    [style.width.%]="80"
+                  ></span>
+                </div>
               </div>
-              <div class="skills__bar">
-                <span
-                  class="skills__percentage skills__js"
-                  [style.width.%]="75"
-                ></span>
+            </div>
+
+            <div class="skills__data">
+              <img src="assets/images/angularjs.svg" alt="" width="41px" />
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">Angular</h3>
+                  <span class="skills__number">85%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__angular"
+                    [style.width.%]="85"
+                  ></span>
+                </div>
               </div>
             </div>
             <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">Angular</h3>
-                <span class="skills__number">85%</span>
+              <img src="assets/images/typescript.svg" alt="" width="41px" />
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">TypeScript</h3>
+                  <span class="skills__number">70%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__ts"
+                    [style.width.%]="70"
+                  ></span>
+                </div>
               </div>
-              <div class="skills__bar">
-                <span
-                  class="skills__percentage skills__angular"
-                  [style.width.%]="85"
-                ></span>
+            </div>
+            <div class="skills__data">
+              <img src="assets/images/javascript.svg" alt="" width="41px" />
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">JavaScript</h3>
+                  <span class="skills__number">75%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__js"
+                    [style.width.%]="75"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="skills__data">
+              <img src="assets/images/jquery.svg" alt="" width="41px" />
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">JQuery</h3>
+                  <span class="skills__number">55%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__jq"
+                    [style.width.%]="55"
+                  ></span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <!--====== SKILL 2 =========-->
-        <div
+      <!-- <div> -->
+      <!--====== SKILL 2 =========-->
+      <!-- <div
           class="skills__content"
           (click)="onSkillClick(2)"
           [ngClass]="skill_index == 2 ? 'skills__open' : 'skills__close'"
@@ -274,7 +317,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div>
         <!--====== SKILL 3 =========-->
         <div
@@ -283,7 +326,7 @@
           [ngClass]="skill_index == 3 ? 'skills__open' : 'skills__close'"
         >
           <div class="skills__header">
-            <i class="uil uil-server-network skills__icon"></i>
+            <i class="uil uil-wrench skills__icon"></i>
             <div>
               <h1 class="skills__title">Tools</h1>
               <span class="skills__subtitle">More than 4 years</span>
@@ -292,12 +335,65 @@
           </div>
           <div class="skills__list grid">
             <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">Git</h3>
-                <span class="skills__number">80%</span>
+              <i class="uil uil-github"></i>
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">Git / Git Flow</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__git"
+                    [style.width.%]="80"
+                  ></span>
+                </div>
               </div>
-              <div class="skills__bar">
-                <span class="skills__percentage skills__html"></span>
+            </div>
+            <div class="skills__data">
+              <i class="uil uil-code-branch"></i>
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">Team Foundation Server(TFS)</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__tfs"
+                    [style.width.%]="90"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="skills__data">
+              <i class="uil uil-visual-studio"></i>
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">
+                    Visual Studio Code / Micosoft Visual Studio
+                  </h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__vs"
+                    [style.width.%]="80"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="skills__data">
+              <i class="uil uil-adobe"></i>
+              <div>
+                <div class="skills__title">
+                  <h3 class="skills__name">Adobe Photoshop</h3>
+                  <span class="skills__number">50%</span>
+                </div>
+                <div class="skills__bar">
+                  <span
+                    class="skills__percentage skills__photoshop"
+                    [style.width.%]="50"
+                  ></span>
+                </div>
               </div>
             </div>
           </div>
@@ -341,7 +437,9 @@
               <h3 class="qualification__title">
                 Electronics & Communication Engineering
               </h3>
-              <span class="qualification__subtitle">Anna University</span>
+              <span class="qualification__subtitle"
+                >St.Joseph college of Engineering
+              </span>
               <div class="qualification__calendar">
                 <i class="uil uil-calendar-alt"></i>2014 - 2018
               </div>
@@ -359,25 +457,31 @@
               <span class="qualification__line"></span>
             </div>
             <div>
-              <h3 class="qualification__title">dsdsdsd</h3>
-              <span class="qualification__subtitle">Anna University</span>
+              <h3 class="qualification__title">
+                Higher Secondary (HSC - 12th)
+              </h3>
+              <span class="qualification__subtitle"
+                >St.Ann's Matriculation Higher Secondary School</span
+              >
               <div class="qualification__calendar">
-                <i class="uil uil-calendar-alt"></i>2014 - 2018
+                <i class="uil uil-calendar-alt"></i>2013 - 2014
               </div>
             </div>
           </div>
           <!--================= QUALIFICATION 3 =====================-->
           <div class="qualification__data">
             <div>
-              <h3 class="qualification__title">fdsfdsf</h3>
-              <span class="qualification__subtitle">Anna University</span>
+              <h3 class="qualification__title">Matriculation (SSLC - 10th)</h3>
+              <span class="qualification__subtitle"
+                >St.Ann's Matriculation Higher Secondary School</span
+              >
               <div class="qualification__calendar">
-                <i class="uil uil-calendar-alt"></i>2014 - 2018
+                <i class="uil uil-calendar-alt"></i>2011 - 2012
               </div>
             </div>
             <div>
               <span class="qualification__rounder"></span>
-              <!-- <span class="qualification__line"></span> -->
+              <span class="qualification__line"></span>
             </div>
           </div>
         </div>
@@ -390,10 +494,12 @@
           <!--================= QUALIFICATION 1 =====================-->
           <div class="qualification__data">
             <div>
-              <h3 class="qualification__title">Accenture</h3>
-              <span class="qualification__subtitle">Anna University</span>
+              <h3 class="qualification__title">
+                Application Development Senior Analyst
+              </h3>
+              <span class="qualification__subtitle">Accenture</span>
               <div class="qualification__calendar">
-                <i class="uil uil-calendar-alt"></i>2014 - 2018
+                <i class="uil uil-calendar-alt"></i>2019 - Current
               </div>
             </div>
             <div>
@@ -402,7 +508,7 @@
             </div>
           </div>
           <!--================= QUALIFICATION 2 =====================-->
-          <div class="qualification__data">
+          <!-- <div class="qualification__data">
             <div></div>
             <div>
               <span class="qualification__rounder"></span>
@@ -415,14 +521,9 @@
                 <i class="uil uil-calendar-alt"></i>2014 - 2018
               </div>
             </div>
-          </div>
+          </div> -->
           <!--================= QUALIFICATION 3 =====================-->
-          <div class="qualification__data">
-            <div></div>
-            <div>
-              <span class="qualification__rounder"></span>
-              <span class="qualification__line"></span>
-            </div>
+          <!-- <div class="qualification__data">
             <div>
               <h3 class="qualification__title">fdsfdsf</h3>
               <span class="qualification__subtitle">Anna University</span>
@@ -430,7 +531,11 @@
                 <i class="uil uil-calendar-alt"></i>2014 - 2018
               </div>
             </div>
-          </div>
+            <div>
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
