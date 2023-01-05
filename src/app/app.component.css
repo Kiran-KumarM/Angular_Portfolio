@@ -110,6 +110,7 @@
 }
 .home__img img {
   box-shadow: var(--box-shadow-img);
+  border-radius: 50%;
   animation: profile__animate 8s ease-in-out infinite 1s;
 }
 @keyframes profile__animate {
@@ -219,6 +220,9 @@
 }
 .animation svg {
   margin-top: -3.7rem;
+}
+.about__container .lottie-player {
+  margin-top: -4rem;
 }
 .about__description {
   text-align: center;
@@ -548,14 +552,25 @@
 .contact__information {
   display: flex;
   margin-bottom: var(--mb-2);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem 0.7rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  flex-direction: column;
+  align-items: center;
+}
+a .contact__information {
+  cursor: pointer;
+}
+.contact__information div {
+  text-align: center;
 }
 .contact__icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--first-color);
-  margin-right: var(--mb-0-75);
 }
 .contact__title {
-  font-size: var(--h3-font-size);
+  font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
 }
 .contact__subtitle {
@@ -723,6 +738,9 @@
   .home__img {
     order: 1;
     justify-self: center;
+  }
+  .about__container .lottie-player {
+    margin-top: -6rem;
   }
 
   .about__container,
@@ -899,6 +917,7 @@
   .home__social {
     transform: translateX(-6rem);
   }
+
   .services__container {
     grid-template-columns: repeat(3, 238px);
   }
