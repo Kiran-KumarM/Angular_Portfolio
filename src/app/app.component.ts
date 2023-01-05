@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
   isDark: boolean = false;
   @Output() IsDarkTheme = new EventEmitter<boolean>();
 
+  constructor() {}
+
   ngOnInit() {
     /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
     const sections = document.querySelectorAll(
