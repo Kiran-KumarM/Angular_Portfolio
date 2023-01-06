@@ -16,6 +16,16 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    // set theme based on session
+    let currentTheme = localStorage.getItem('isDarkTheme');
+    console.log(currentTheme);
+    if (currentTheme == null) {
+      localStorage.setItem('isDarkTheme', 'false');
+      this.isDark = false;
+    } else {
+      this.isDark = currentTheme === 'false' ? false : true;
+      this.updateThemeClasses();
+    }
     /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
     const sections = document.querySelectorAll(
       'section[id]'
@@ -64,6 +74,10 @@ export class AppComponent implements OnInit {
   }
   toggelTheme() {
     this.isDark = !this.isDark;
+    localStorage.setItem('isDarkTheme', String(this.isDark));
+    this.updateThemeClasses();
+  }
+  updateThemeClasses() {
     if (this.isDark) document.body.classList.add('dark-theme');
     else document.body.classList.remove('dark-theme');
   }
