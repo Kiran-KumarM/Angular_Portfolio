@@ -9,14 +9,28 @@
 
     <!--==================== UNICONS ====================-->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+      />
+    </noscript>
 
     <!--==================== lottie-player ====================-->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+      defer
+    ></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+    ></script> -->
   </head>
   <body>
     <app-root></app-root>
