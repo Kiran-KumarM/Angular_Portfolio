@@ -898,7 +898,7 @@ a .contact__information {
       padding-top: 0.8rem;
     }
     .footer__container {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
     .footer__bg {
       padding: 3rem 0 3.5rem;

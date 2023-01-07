@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+declare let Email: any;
 
 @Component({
   selector: 'app-root',
@@ -86,5 +87,16 @@ export class AppComponent implements OnInit {
   }
   setQulificationIndex(index: number) {
     this.qulifiactionIndex = index;
+  }
+  onSubmit() {
+    Email.send({
+      SecureToken: '95a22a56-773a-43d4-87c7-6c84e75ff2b0',
+      To: 'mkkumar7714@gmail.com',
+      From: 'kiran@gmail.com',
+      Subject: 'test',
+      Body: '<i>This is sent as a feedback from my resume page.</i>',
+    }).then((message: any) => {
+      alert(message);
+    });
   }
 }
