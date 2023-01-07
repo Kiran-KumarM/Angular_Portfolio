@@ -268,15 +268,22 @@
 
 /*============ SKILLS ===================*/
 .skills__container {
-  row-gap: 0;
+  gap: 1.5rem;
+}
+.skills__content {
+  height: 100%;
+  border: 1px solid var(--border-color);
+  padding: 0.9rem 1rem 0.9rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
 }
 .skills__header {
   display: flex;
   align-items: center;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-2);
   cursor: pointer;
 }
-.skils__icon,
+.skills__icon,
 .skills__arrow {
   font-size: 2rem;
   color: var(--first-color);
@@ -319,16 +326,19 @@
 }
 .skills__list {
   row-gap: 1.5rem;
-  padding-left: 1.5rem;
+  /* padding-left: 1.5rem; */
 }
 .skills__title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--mb-0-5);
+  margin-bottom: var(--mb-0-25);
 }
 .skills__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+}
+.skills__number {
+  font-size: var(--small-font-size);
 }
 .skills__bar,
 .skills__percentage {
@@ -837,6 +847,9 @@ a .contact__information {
     }
     .about__buttons {
       justify-content: initial;
+    }
+    .skills__container {
+      grid-template-columns: repeat(2, 1fr);
     }
     .qualification__tabs {
       justify-content: center;
