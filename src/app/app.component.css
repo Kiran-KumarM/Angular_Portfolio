@@ -588,7 +588,6 @@ a .contact__information {
   color: var(--text-color-light);
 }
 .contact__content {
-  background-color: var(--input-color);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.25rem;
 }
@@ -606,6 +605,101 @@ a .contact__information {
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
+
+.custom-field {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: inline-block;
+  --field-padding: 12px;
+  width: 100%;
+}
+
+.custom-field :is(input, textarea) {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+:is(input, textarea)::placeholder {
+  opacity: 0;
+  color: var(--first-color-lighter);
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+.custom-field .placeholder {
+  position: absolute;
+  left: var(--field-padding);
+  width: calc(100% - (var(--field-padding) * 2));
+  top: 24px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: var(--first-color-second);
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+.custom-field :is(input, textarea):focus::placeholder {
+  opacity: 1;
+}
+.custom-field :is(input, textarea).dirty + .placeholder,
+.custom-field :is(input, textarea):focus + .placeholder,
+.custom-field :is(input, textarea):not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  font-size: 10px;
+  color: #222;
+}
+
+.custom-field .error-message {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 12px;
+  background: #d30909;
+  color: #fff;
+  height: 24px;
+}
+
+.custom-field .error-message:empty {
+  opacity: 0;
+}
+.custom-field.one :is(input, textarea) {
+  background: none;
+  border: 2px solid var(--first-color-lighter);
+  transition: border-color 0.3s ease;
+}
+
+.custom-field.one :is(input, textarea) + .placeholder {
+  left: 8px;
+  padding: 0 5px;
+}
+
+.custom-field.one :is(input, textarea).dirty,
+.custom-field.one :is(input, textarea):not(:placeholder-shown),
+.custom-field.one :is(input, textarea):focus {
+  border-color: var(--first-color-alt);
+  transition-delay: 0.1s;
+}
+
+.custom-field.one :is(input, textarea).dirty + .placeholder,
+.custom-field.one :is(input, textarea):not(:placeholder-shown) + .placeholder,
+.custom-field.one :is(input, textarea):focus + .placeholder {
+  top: 0;
+  font-size: 10px;
+  color: var(--first-color-second);
+  background: #fff;
+  width: auto;
+}
+.contact__button {
+  text-align: end;
+  padding-right: 1rem;
+}
+
 /*================== FOOTER ==================*/
 .footer {
   padding-top: 2rem;

@@ -810,29 +810,37 @@
       <form action="" class="contact__form grid">
         <div class="contact__inputs grid">
           <div class="contact__content">
-            <label for="" class="contact__label">Name</label>
-            <input type="text" class="contact__input" />
+            <label class="custom-field one">
+              <input type="text" placeholder="Enter Name" />
+              <span class="placeholder">Name</span>
+            </label>
           </div>
           <div class="contact__content">
-            <label for="" class="contact__label">Email</label>
-            <input type="email" class="contact__input" />
+            <label class="custom-field one">
+              <input type="email" placeholder="Enter Email" />
+              <span class="placeholder">Email</span>
+            </label>
           </div>
         </div>
         <div class="contact__content">
-          <label for="" class="contact__label">Subject</label>
-          <input type="text" class="contact__input" />
+          <label class="custom-field one">
+            <input type="text" placeholder="Enter Subject" />
+            <span class="placeholder">Subject</span>
+          </label>
         </div>
         <div class="contact__content">
-          <label for="" class="contact__label">Message</label>
-          <textarea
-            name=""
-            id=""
-            cols="0"
-            rows="7"
-            class="contact__input"
-          ></textarea>
+          <label class="custom-field one">
+            <textarea
+              name=""
+              id=""
+              cols="0"
+              rows="7"
+              placeholder="Enter Message"
+            ></textarea>
+            <span class="placeholder">Message</span>
+          </label>
         </div>
-        <div>
+        <div class="contact__button">
           <a class="button button--flex" (click)="onSubmit()">
             Send Message
             <i class="uil uil-message button__icon"></i>
