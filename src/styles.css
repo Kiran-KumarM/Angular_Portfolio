@@ -24,6 +24,8 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   --box-shadow-img: 0 0 0 9px rgb(231 231 231 / 62%);
   --border-color: hsl(var(--hue-color), 92%, 85%);
+  --placeholder-color: var(--first-color-second);
+
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
 
@@ -231,6 +233,7 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
   --box-shadow-img: 0 0 0 9px rgb(46 47 73 /62%);
   --border-color: hsl(var(--hue-color), 92%, 85%, 40%);
+  --placeholder-color: var(hsl(var(--hue-color), 69%, 61%));
 }
 
 /*======== SCROLL BAR ===========*/

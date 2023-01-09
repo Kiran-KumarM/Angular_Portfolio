@@ -640,7 +640,7 @@ a .contact__information {
   top: 24px;
   line-height: 100%;
   transform: translateY(-50%);
-  color: var(--first-color-second);
+  color: var(--placeholder-color);
   transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
 .custom-field :is(input, textarea):focus::placeholder {
@@ -661,7 +661,7 @@ a .contact__information {
   padding: 0 8px;
   font-size: 12px;
   background: #d30909;
-  color: #fff;
+  color: var(--body-color);
   height: 24px;
 }
 
@@ -691,8 +691,8 @@ a .contact__information {
 .custom-field.one :is(input, textarea):focus + .placeholder {
   top: 0;
   font-size: 10px;
-  color: var(--first-color-second);
-  background: #fff;
+  color: var(--placeholder-color);
+  background: var(--body-color);
   width: auto;
 }
 .contact__button {
