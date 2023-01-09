@@ -747,6 +747,86 @@ a .contact__information {
 .footer__social {
   color: #fff;
 }
+
+/*============= SNACK BAR ========================*/
+
+.snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  position: fixed;
+  top: 2rem;
+  right: -20rem;
+  font-size: 1rem;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  z-index: var(--z-preloader);
+}
+.snackbar i {
+  font-size: 1.5rem;
+}
+.snackbar.success {
+  background-color: #51a351;
+}
+.snackbar.error {
+  background-color: #bd362f;
+}
+
+.snackbar:is(.success, .error) {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s forwards, fadeout 0.5s 3s forwards;
+  animation: fadein 0.5s forwards, fadeout 0.5s 3s forwards;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    right: -20rem;
+    opacity: 0;
+  }
+  to {
+    right: 1rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    right: -20rem;
+    opacity: 0;
+  }
+  to {
+    right: 1rem;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    right: 1rem;
+    opacity: 1;
+  }
+  to {
+    right: -20rem;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    right: 1rem;
+    opacity: 1;
+  }
+  to {
+    right: -20rem;
+    opacity: 0;
+  }
+}
+
 /*============ SCROLL TOP =====================*/
 .scrollup {
   position: fixed;

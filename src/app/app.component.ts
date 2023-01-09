@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   isDark: boolean = false;
   @Output() IsDarkTheme = new EventEmitter<boolean>();
   contactForm!: FormGroup;
-
+  snackBar!: any;
   constructor() {}
 
   ngOnInit() {
@@ -102,13 +102,11 @@ export class AppComponent implements OnInit {
     Email.send({
       SecureToken: '95a22a56-773a-43d4-87c7-6c84e75ff2b0',
       To: 'mkkumar7714@gmail.com',
-      From: this.contactForm.value.email,
+      From: 'mkkumar7714@gmail.com',
       Subject: this.contactForm.value.subject,
       Body:
         '<p><b>Name :</b> ' +
         this.contactForm.value.name +
-        '</p><p><b>Subject :</b> ' +
-        this.contactForm.value.subject +
         '</p><p><b>From Email :</b> ' +
         this.contactForm.value.email +
         ' </p><p><b>Message :</b> ' +
@@ -117,9 +115,17 @@ export class AppComponent implements OnInit {
     }).then((message: any) => {
       if (message.includes('OK')) {
         this.contactForm.reset();
+        this.toaster('Message Sent', 'success');
       } else {
+        this.toaster('Something Went Wrong', 'error');
       }
-      alert(message);
     });
+  }
+
+  toaster(message: string, type: string) {
+    this.snackBar = { message: message, type: type };
+    setTimeout(() => {
+      this.snackBar = { message: '', type: '' };
+    }, 4000);
   }
 }

@@ -62,6 +62,7 @@
 
 <!--=============== MAIN ==================-->
 <main class="main">
+  <app-toaster></app-toaster>
   <!--============== HOME ===================-->
   <section class="home section" id="home">
     <div class="home__container container grid">
@@ -925,3 +926,27 @@
     <i class="uil uil-arrow-up scrollup__icon"></i>
   </a>
 </main>
+
+<!--================= SNACK BAR ======================-->
+<div
+  class="snackbar"
+  [ngClass]="
+    snackBar?.type == 'success'
+      ? 'success'
+      : snackBar?.type == 'error'
+      ? 'error'
+      : ''
+  "
+>
+  <i
+    class="uil"
+    [ngClass]="
+      snackBar?.type == 'success'
+        ? 'uil-check-circle'
+        : snackBar?.type == 'error'
+        ? 'uil-times-circle'
+        : ''
+    "
+  ></i>
+  {{ snackBar?.message }}
+</div>
