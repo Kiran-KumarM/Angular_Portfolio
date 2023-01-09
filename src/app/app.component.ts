@@ -124,8 +124,8 @@ export class AppComponent implements OnInit {
 
   toaster(message: string, type: string) {
     this.snackBar = { message: message, type: type };
-    setTimeout(() => {
-      this.snackBar = { message: '', type: '' };
-    }, 4000);
+    // setTimeout(() => {
+    //   this.snackBar = { message: '', type: '' };
+    // }, 4000);
   }
 }
