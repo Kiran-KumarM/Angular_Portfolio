@@ -627,6 +627,7 @@ a .contact__information {
   outline: none;
   font-size: 14px;
   width: 100%;
+  color: var(--title-color);
 }
 :is(input, textarea)::placeholder {
   opacity: 0;
@@ -654,17 +655,15 @@ a .contact__information {
   color: #222;
 }
 
-.custom-field .error-message {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 8px;
-  font-size: 12px;
-  background: #d30909;
-  color: var(--body-color);
-  height: 24px;
+.custom-field :is(input, textarea).is-invalid {
+  border: 2px solid #da5c5c !important;
 }
-
+.invalid-feedback {
+  font-size: 0.78rem;
+  color: #da5c5c;
+  position: absolute;
+  font-style: italic;
+}
 .custom-field .error-message:empty {
   opacity: 0;
 }
@@ -698,6 +697,9 @@ a .contact__information {
 .contact__button {
   text-align: end;
   padding-right: 1rem;
+}
+.contact__button .button {
+  cursor: pointer;
 }
 
 /*================== FOOTER ==================*/
@@ -1048,6 +1050,7 @@ a .contact__information {
     width: 460px;
   }
   .contact__inputs {
-    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.1rem;
+    grid-template-columns: 1fr 1.3fr;
   }
 }

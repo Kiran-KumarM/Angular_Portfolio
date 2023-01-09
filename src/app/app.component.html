@@ -807,24 +807,60 @@
         </div>
       </div>
 
-      <form action="" class="contact__form grid">
+      <form
+        action=""
+        class="contact__form grid"
+        name="contactForm"
+        [formGroup]="contactForm"
+      >
         <div class="contact__inputs grid">
           <div class="contact__content">
             <label class="custom-field one">
-              <input type="text" placeholder="Enter Name" />
+              <input
+                type="text"
+                placeholder="Enter Name"
+                formControlName="name"
+              />
               <span class="placeholder">Name</span>
             </label>
           </div>
           <div class="contact__content">
             <label class="custom-field one">
-              <input type="email" placeholder="Enter Email" />
+              <input
+                type="email"
+                placeholder="Enter Email"
+                formControlName="email"
+                [ngClass]="{
+                  'is-invalid':
+                    contactForm.get('email')?.touched &&
+                    contactForm.get('email')?.invalid
+                }"
+              />
               <span class="placeholder">Email</span>
+              <div
+                *ngIf="
+                  contactForm.get('email')?.touched &&
+                  contactForm.get('email')?.invalid
+                "
+                class="invalid-feedback"
+              >
+                <div *ngIf="contactForm.get('email')?.errors?.['required']">
+                  Email Name is required
+                </div>
+                <div *ngIf="contactForm.get('email')?.errors?.['email']">
+                  Email must be a valid email Address
+                </div>
+              </div>
             </label>
           </div>
         </div>
         <div class="contact__content">
           <label class="custom-field one">
-            <input type="text" placeholder="Enter Subject" />
+            <input
+              type="text"
+              placeholder="Enter Subject"
+              formControlName="subject"
+            />
             <span class="placeholder">Subject</span>
           </label>
         </div>
@@ -836,12 +872,19 @@
               cols="0"
               rows="7"
               placeholder="Enter Message"
+              formControlName="message"
             ></textarea>
             <span class="placeholder">Message</span>
           </label>
         </div>
         <div class="contact__button">
-          <a class="button button--flex" (click)="onSubmit()">
+          <a
+            class="button button--flex"
+            (click)="onSubmit()"
+            [ngStyle]="{
+              'pointer-events': !contactForm.valid ? 'none' : 'unset'
+            }"
+          >
             Send Message
             <i class="uil uil-message button__icon"></i>
           </a>

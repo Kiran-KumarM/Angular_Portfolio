@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 declare let Email: any;
 
 @Component({
@@ -13,10 +14,17 @@ export class AppComponent implements OnInit {
   qulifiactionIndex: number = 1;
   isDark: boolean = false;
   @Output() IsDarkTheme = new EventEmitter<boolean>();
+  contactForm!: FormGroup;
 
   constructor() {}
 
   ngOnInit() {
+    this.contactForm = new FormGroup({
+      name: new FormControl(''),
+      subject: new FormControl(''),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      message: new FormControl(''),
+    });
     // set theme based on session
     let currentTheme = localStorage.getItem('isDarkTheme');
     console.log(currentTheme);
@@ -89,13 +97,28 @@ export class AppComponent implements OnInit {
     this.qulifiactionIndex = index;
   }
   onSubmit() {
+    console.log(this.contactForm.value);
+    //   return;
     Email.send({
       SecureToken: '95a22a56-773a-43d4-87c7-6c84e75ff2b0',
       To: 'mkkumar7714@gmail.com',
-      From: 'kiran@gmail.com',
-      Subject: 'test',
-      Body: '<i>This is sent as a feedback from my resume page.</i>',
+      From: this.contactForm.value.email,
+      Subject: this.contactForm.value.subject,
+      Body:
+        '<p><b>Name :</b> ' +
+        this.contactForm.value.name +
+        '</p><p><b>Subject :</b> ' +
+        this.contactForm.value.subject +
+        '</p><p><b>From Email :</b> ' +
+        this.contactForm.value.email +
+        ' </p><p><b>Message :</b> ' +
+        this.contactForm.value.message +
+        '  </p>',
     }).then((message: any) => {
+      if (message.includes('OK')) {
+        this.contactForm.reset();
+      } else {
+      }
       alert(message);
     });
   }
