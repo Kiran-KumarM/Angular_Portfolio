@@ -431,17 +431,28 @@
 .portfolio__container {
   overflow: initial;
 }
-
+.swiper-wrapper {
+  display: grid;
+  gap: 1.5rem;
+}
 .portfolio__content {
-  padding: 0 1.5rem;
+  border-radius: 42px;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
 }
 
 .portfolio__img {
   width: 265px;
   border-radius: 0.5rem;
   justify-self: center;
+  background-size: contain;
+  width: 100% !important;
+  height: 320px;
 }
-
+.portfolio_ {
+  padding: 0 0.5rem 1.5rem 1.5rem;
+}
 .portfolio__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);
@@ -931,8 +942,8 @@ a .contact__information {
 
   .about__container,
   .skills_container,
-  .portfolio__content,
   .project__container,
+  .swiper-wrapper,
   .contact__container,
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
