@@ -440,6 +440,7 @@
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  margin: 0 1rem;
 }
 
 .portfolio__img {
