@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'portfolio';
   isToggel: boolean = false;
   skill_index: number = 1;
-  qulifiactionIndex: number = 1;
+  qulifiactionIndex: number = 2;
   isDark: boolean = false;
   @Output() IsDarkTheme = new EventEmitter<boolean>();
   contactForm!: FormGroup;
